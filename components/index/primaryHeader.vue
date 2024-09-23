@@ -31,15 +31,14 @@
                         <nuxt-img src="/img/logos/logo.png" class="w-[300px] lg:w-[500px]"/>
                     </div>
                     <div class="pt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="750">
-                        <h1 class="font-one-lord text-center">{{ $t('welcome.title') }} {{ }}</h1>
+                        <h1 class="font-one-lord text-center">{{ $t('welcome.title') }}</h1>
                     </div>
                     <div class="pt-5 max-w-xl" data-aos="fade-up" data-aos-delay="400" data-aos-duration="750">
-                        <h4 class="font-one-lord text-center">{{ $t('welcome.title') }} {{ }}</h4>
+                        <h4 class="font-one-lord text-center">{{ $t('welcome.title') }}</h4>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <common-spark/>
 </template>

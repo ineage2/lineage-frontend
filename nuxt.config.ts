@@ -8,10 +8,11 @@ export default defineNuxtConfig({
     },
 
     modules: [
-        '@nuxt/image',
-        'nuxt-aos',
-        '@nuxtjs/i18n',
-        '@nuxtjs/tailwindcss'
+      '@nuxt/image',
+      'nuxt-aos',
+      '@nuxtjs/i18n',
+      '@nuxtjs/tailwindcss',
+      '@nuxt/icon',
     ],
     
     css: ['~/assets/css/_root.css'],
