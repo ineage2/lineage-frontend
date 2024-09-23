@@ -10,7 +10,7 @@
                       data-aos="fade-in" data-aos-once="true"/>
 
             <div class="w-dvw h-60 absolute bottom-0 z-10"
-                 style="background: linear-gradient(0deg, rgba(7,7,7,1) 10%, rgba(255,0,0,0) 100%);" data-aos="fade-in"
+                 style="background: linear-gradient(0deg, rgba(7,6,6,1) 10%, rgba(255,0,0,0) 100%);" data-aos="fade-in"
                  data-aos-delay="100">
             </div>
 
