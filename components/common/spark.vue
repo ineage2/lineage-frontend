@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="sparks"></div>
+        <div id="sparks" data-aos="fade-in" data-aos-once="true"></div>
     </div>
 </template>
 

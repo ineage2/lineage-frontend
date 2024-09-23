@@ -7,7 +7,7 @@
         <div class="relative w-full h-full">
             <!--<nuxt-img src="/img/spark/spark-bg.png" class="w-dvw h-dvh absolute z-10 object-cover pointer-events-none"/>-->
             <nuxt-img src="/img/backgrounds/bg-1.jpg" class="w-dvw h-dvh absolute object-cover pointer-events-none"
-                      data-aos="fade-in"/>
+                      data-aos="fade-in" data-aos-once="true"/>
 
             <div class="w-dvw h-60 absolute bottom-0 z-10"
                  style="background: linear-gradient(0deg, rgba(7,7,7,1) 10%, rgba(255,0,0,0) 100%);" data-aos="fade-in"
@@ -27,13 +27,13 @@
 
             <div class="overflow-hidden w-dvw h-dvh relative block container max-w-4xl mx-auto px-2">
                 <div class="relative flex flex-col w-full h-full items-center justify-center">
-                    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
                         <nuxt-img src="/img/logos/logo.png" class="w-[300px] lg:w-[500px]"/>
                     </div>
-                    <div class="pt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="750">
+                    <div class="pt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="750" data-aos-once="true">
                         <h1 class="font-one-lord text-center">{{ $t('welcome.title') }}</h1>
                     </div>
-                    <div class="pt-5 max-w-xl" data-aos="fade-up" data-aos-delay="400" data-aos-duration="750">
+                    <div class="pt-5 max-w-xl" data-aos="fade-up" data-aos-delay="400" data-aos-duration="750" data-aos-once="true">
                         <h4 class="font-one-lord text-center">{{ $t('welcome.title') }}</h4>
                     </div>
                 </div>
