@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localeRoute = useLocaleRoute();
+
 interface Props {
     to: string;
     icon: string;
@@ -10,9 +12,8 @@ const props = defineProps<Props>();
 <template>
     <NuxtLink
         v-if="props.to"
-        :to="props.to"
+        :to="localeRoute(props.to)"
         class="button"
-        active-class="button-active"
     >
 
         <Icon :name="props.icon"/>
@@ -21,11 +22,11 @@ const props = defineProps<Props>();
 
 <style lang="less" scoped>
 .button {
+    @apply flex;
     text-decoration: none;
     color: wheat;
-    display: flex;
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -52,15 +53,5 @@ const props = defineProps<Props>();
     filter: brightness(130%);
     pointer-events: none;
     transition: 0.3s;
-}
-
-.button svg {
-    width: 1.1rem;
-    height: 1.1rem;
-    position: relative;
-}
-
-.button svg path {
-    fill: wheat;
 }
 </style>

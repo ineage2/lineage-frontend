@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       '@nuxt/icon',
     ],
     
-    css: ['~/assets/css/_root.css'],
+    css: ['~/assets/css/_root.css', '~/assets/css/scrollbar.less'],
     
     tailwindcss: {
         cssPath: ['~/assets/css/tailwind.css', {injectPosition: "first"}],

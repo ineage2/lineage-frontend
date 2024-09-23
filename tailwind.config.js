@@ -12,6 +12,8 @@ export default {
             colors: {
                 'vlada-color-1': '#070707',
                 'vlada-color-2': '#dcbb8f',
+                'vlada-color-3': '#d8a774',
+                'vlada-color-4': '#252525'
             },
             fontFamily: {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],
