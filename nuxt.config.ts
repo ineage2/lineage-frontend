@@ -6,12 +6,16 @@ export default defineNuxtConfig({
     app: {
         // baseURL: '/lineage-frontend/'
     },
+
     modules: [
         '@nuxt/image',
         'nuxt-aos',
         '@nuxtjs/i18n',
         '@nuxtjs/tailwindcss'
     ],
+    
+    css: ['~/assets/css/_root.css'],
+    
     tailwindcss: {
         cssPath: ['~/assets/css/tailwind.css', {injectPosition: "first"}],
         configPath: 'tailwind.config',
@@ -21,6 +25,7 @@ export default defineNuxtConfig({
         config: {},
         viewer: true,
     },
+
     i18n: {
         locales: [
             {code: 'en', language: 'en-US', name: 'English'},
@@ -31,5 +36,5 @@ export default defineNuxtConfig({
         defaultLocale: 'en',
         strategy: 'prefix_and_default',
         vueI18n: './i18n.config.ts'
-    }
+    },
 })

@@ -1,21 +1,24 @@
-.body {
-    @apply text-sm;
+@font-face {
+    font-family: arpona-regular;
+    src: url(assets/fonts/Arpona-Regular.woff);
 }
 
-.vlada-container {
-    @apply xl:max-w-big lg:max-w-medium md:max-w-small mx-auto container px-3;
-}
-
-* {
-    font-family: Manrope, sans-serif;
+@font-face {
+    font-family: one-lord;
+    src: url(assets/fonts/TheOneLord.woff);
 }
 
 #__nuxt {
-    @apply overflow-hidden
+    @apply overflow-hidden bg-vlada-color-1;
 }
 
+.container-inner {
+    @apply xl:max-w-big lg:max-w-medium md:max-w-small mx-auto container px-3;
+}
+
+/* h1 h6 */
 h1, h2, h3, h4, h5, h6 {
-    @apply transition-colors
+    @apply transition-colors text-vlada-color-2;
 }
 
 h1 {
