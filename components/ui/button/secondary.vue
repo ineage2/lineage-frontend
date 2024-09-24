@@ -2,8 +2,8 @@
 const localeRoute = useLocaleRoute();
 
 interface Props {
-    to: string;
-    external: boolean;
+    to?: string;
+    external?: boolean;
     icon: string;
 }
 

@@ -2,7 +2,7 @@
 const localeRoute = useLocaleRoute();
 
 interface Props {
-    to: string;
+    to?: string;
     external?: boolean;
     placeholder: string;
 }
@@ -41,7 +41,7 @@ const props = defineProps<Props>();
 
 .button:hover {
     filter: brightness(130%);
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .button::before {

@@ -66,16 +66,16 @@ const openModal = () => {
     <ui-modal-primary ref="modalRef">
         <section class="modal">
             <h3>
-                {{ $t('welcome.modal.title') }}
+                {{ $t('welcome.modal.download-modal.title') }}
             </h3>
             <span>
-                {{ $t('welcome.modal.description') }}
+                {{ $t('welcome.modal.download-modal.description') }}
             </span>
             <span></span>
             <div class="download-modal-container">
                 <div class="download-modal-container-download-type-card">
                     <div class="download-modal-container-download-type-card-type">
-                        download with {{ $t('welcome.modal.google-disk') }}
+                        download with {{ $t('welcome.modal.download-modal.google-disk') }}
                     </div>
                     <div>
                         <ui-button-quaternary to="https://www.google.com/drive/" :external="true"
@@ -87,7 +87,7 @@ const openModal = () => {
                 </div>
                 <div class="download-modal-container-download-type-card">
                     <div class="download-modal-container-download-type-card-type">
-                        download with {{ $t('welcome.modal.mega') }}
+                        download with {{ $t('welcome.modal.download-modal.mega') }}
                     </div>
                     <div>
                         <ui-button-quaternary to="https://mega.io/?aff=Bp1QjAyT" :external="true"
@@ -99,12 +99,15 @@ const openModal = () => {
                 </div>
                 <div class="download-modal-container-download-type-card">
                     <div class="download-modal-container-download-type-card-type">
-                        download with {{ $t('welcome.modal.site') }}
+                        download with {{ $t('common.name') }}
                     </div>
                     <div>
                         <ui-button-quaternary to="https://mega.io/?aff=Bp1QjAyT" :external="true"
                                               :placeholder="$t('welcome.download')"/>
                     </div>
+                </div>
+                <div class="download-modal-container-download-type-or">
+                    <p>{{ $t('welcome.modal.download-modal.footer-text') }}</p>
                 </div>
             </div>
         </section>
@@ -118,7 +121,7 @@ const openModal = () => {
     }
 
     span {
-    @apply font-arpona-regular opacity-70;
+    @apply font-arpona-regular;
     }
 }
 
@@ -133,7 +136,7 @@ const openModal = () => {
     @apply flex w-full justify-between relative z-10;
         border-radius: 0.3rem;
         background: linear-gradient(120deg, rgb(42, 34, 22), rgb(111, 81, 35));
-        
+
         &:after {
             content: "";
             position: absolute;

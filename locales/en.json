@@ -1,5 +1,6 @@
 {
     "common": {
+        "name": "Saga Online",
         "or": "Or"
     },
     "welcome": {
@@ -10,11 +11,13 @@
         "create-account": "Create account",
         "join-in-community": "Join in community",
         "modal": {
-            "title": "Download Launcher",
-            "description": "The launcher is your key to adventures in the world of epic fantasy! Download it to install the game, receive regular updates and enjoy flawless gaming experience.",
-            "google-disk": "Google disk",
-            "mega": "Mega",
-            "site": "Saga Online"
+            "download-modal": {
+                "title": "Download Launcher",
+                "description": "The launcher is your key to adventures in the world of epic fantasy! Download it to install the game, receive regular updates and enjoy flawless gaming experience.",
+                "google-disk": "Google disk",
+                "mega": "Mega",
+                "footer-text": "After downloading the launcher file, Launcher.exe, create a new folder and move the Launcher.exe file into it. Then run it as an administrator to avoid any possible access rights issues and ensure correct installation."
+            }
         }
     },
     "header": {

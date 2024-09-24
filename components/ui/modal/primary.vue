@@ -5,14 +5,10 @@ const isVisible = ref(false);
 
 const openModal = () => {
     isVisible.value = true;
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '10px';
 };
 
 const closeModal = () => {
     isVisible.value = false;
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '0';
 };
 
 onBeforeUnmount(() => {
@@ -25,7 +21,10 @@ defineExpose({openModal, closeModal});
 <template>
     <div>
         <transition>
-            <div v-show="isVisible" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div
+                v-show="isVisible"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+                @click.self="closeModal">
                 <div class="modal-container">
                     <div class="w-full flex items-center justify-end">
                         <ui-button-tertiary icon="bi:x-lg" @click="closeModal"/>
