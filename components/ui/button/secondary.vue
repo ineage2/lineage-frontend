@@ -18,7 +18,7 @@ const props = defineProps<Props>();
     >
         <Icon :name="props.icon" class="button-icon"/>
     </NuxtLink>
-    <a class="button" :href="props.to" target="_blank">
+    <a v-else class="button" :href="props.to" target="_blank">
          <Icon :name="props.icon" class="button-icon"/>
     </a>
 </template>

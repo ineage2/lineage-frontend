@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import {ref} from 'vue';
-import UiModalPrimary from '@/components/ui/modal/primary.vue'; // Путь к твоему компоненту
+import UiModalPrimary from '@/components/ui/modal/primary.vue';
 
 const modalRef = ref(null);
 
-// Метод для открытия модального окна
 const openModal = () => {
     modalRef.value.openModal();
 };
@@ -63,7 +62,7 @@ const openModal = () => {
         </div>
     </section>
     <common-spark/>
-    <ui-modal-primary ref="modalRef">
+    <ui-modal-primary ref="modalRef" max="750">
         <section class="modal">
             <h3>
                 {{ $t('welcome.modal.download-modal.title') }}
@@ -116,6 +115,8 @@ const openModal = () => {
 
 <style scoped lang="less">
 .modal {
+@apply w-auto;
+
     h3 {
     @apply font-one-lord;
     }
@@ -133,7 +134,7 @@ const openModal = () => {
     }
 
     &-download-type-card {
-    @apply flex w-full justify-between relative z-10;
+    @apply flex justify-between relative z-10;
         border-radius: 0.3rem;
         background: linear-gradient(120deg, rgb(42, 34, 22), rgb(111, 81, 35));
 
@@ -143,10 +144,10 @@ const openModal = () => {
             border: 1rem solid transparent;
             border-image: url(/img/frames/frame_square.png);
             border-image-slice: 40 40 fill;
-            left: -0.1rem;
-            right: -0.1rem;
-            bottom: -0.1rem;
-            top: -0.1rem;
+            left: -0.2rem;
+            right: -0.2rem;
+            bottom: -0.2rem;
+            top: -0.2rem;
             pointer-events: none;
             transition: 0.3s;
             filter: brightness(130%);

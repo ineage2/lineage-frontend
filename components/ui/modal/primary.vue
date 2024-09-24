@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import {ref, onMounted, onBeforeUnmount} from 'vue';
+import {ref} from 'vue';
+
+interface Props {
+    max?: string;
+}
+
+const props = defineProps<Props>();
 
 const isVisible = ref(false);
 
@@ -11,10 +17,6 @@ const closeModal = () => {
     isVisible.value = false;
 };
 
-onBeforeUnmount(() => {
-    document.body.style.overflow = '';
-});
-
 defineExpose({openModal, closeModal});
 </script>
 
@@ -24,9 +26,10 @@ defineExpose({openModal, closeModal});
             <div
                 v-show="isVisible"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+           
                 @click.self="closeModal">
-                <div class="modal-container">
-                    <div class="w-full flex items-center justify-end">
+                <div class="modal-container" :style="'max-width:' + props.max + 'px'">
+                    <div class="flex items-center justify-end">
                         <ui-button-tertiary icon="bi:x-lg" @click="closeModal"/>
                     </div>
                     <slot></slot>
@@ -38,8 +41,7 @@ defineExpose({openModal, closeModal});
 
 <style scoped lang="less">
 .modal-container {
-@apply px-4 py-3 relative;
-    width: min(80%, 45rem);
+@apply px-4 py-3 relative mx-auto;
     background-color: rgb(235, 230, 219);
 }
 
