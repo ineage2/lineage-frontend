@@ -143,8 +143,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 #sparks {
-    @apply absolute top-0 w-full h-full bg-transparent;
+@apply absolute top-0 w-full h-full bg-transparent;
 }
 </style>

@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
     <header class="header" :class="headerClass">
         <div class="container-inner">
             <div class="header-container">
-                <ul class="flex gap-4 items-center" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
+                <ul class="header-container-list" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
                     data-aos-once="true">
                     <li>
                         <ui-link-primary size="base" to="/" :placeholder="$t('header.home')"/>
@@ -57,6 +57,10 @@ onBeforeUnmount(() => {
 
     &-container {
     @apply flex items-center justify-center;
+        
+        &-list {
+            @apply flex gap-4 items-center;
+        }
     }
 }
 

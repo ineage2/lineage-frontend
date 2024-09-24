@@ -8,6 +8,10 @@
     src: url(assets/fonts/TheOneLord.woff);
 }
 
+body {
+    @apply bg-vlada-color-1;
+}
+
 #__nuxt {
     @apply overflow-hidden bg-vlada-color-1;
 }

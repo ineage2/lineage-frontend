@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import {ref} from 'vue';
+import UiModalPrimary from '@/components/ui/modal/primary.vue'; // Путь к твоему компоненту
 
+const modalRef = ref(null);
+
+// Метод для открытия модального окна
+const openModal = () => {
+    modalRef.value.openModal();
+};
 </script>
 
 <template>
@@ -14,16 +22,16 @@
                  data-aos-delay="100">
             </div>
 
-            <!--            <div class="pt-32 overflow-hidden w-dvw h-dvh relative hidden xl:block">-->
-            <!--            <div class="relative flex flex-row w-full h-full">-->
-            <!--            <nuxt-img src="/img/characters/character-1.png"-->
-            <!--            class="absolute h-full pointer-events-none right-[-200px] top-32 " style="scale: 1.3"-->
-            <!--            data-aos="fade-left" data-aos-duration="1000"/>-->
-            <!--            <nuxt-img src="/img/characters/character-3.png"-->
-            <!--            class="absolute h-full pointer-events-none left-[-200px] top-28" style="scale: 1.4"-->
-            <!--             data-aos="fade-right" data-aos-duration="1000"/>-->
-            <!--            </div>-->
-            <!--            </div>-->
+            <!--<div class="pt-32 overflow-hidden w-dvw h-dvh relative hidden xl:block">-->
+            <!--<div class="relative flex flex-row w-full h-full">-->
+            <!--<nuxt-img src="/img/characters/character-1.png"-->
+            <!--class="absolute h-full pointer-events-none right-[-200px] top-32 " style="scale: 1.3"-->
+            <!--data-aos="fade-left" data-aos-duration="1000"/>-->
+            <!--<nuxt-img src="/img/characters/character-3.png"-->
+            <!--class="absolute h-full pointer-events-none left-[-200px] top-28" style="scale: 1.4"-->
+            <!--data-aos="fade-right" data-aos-duration="1000"/>-->
+            <!--</div>-->
+            <!--</div>-->
 
             <div class="overflow-hidden w-dvw h-dvh relative block container max-w-4xl mx-auto px-2">
                 <div class="relative flex flex-col w-full h-full items-center justify-center">
@@ -45,7 +53,7 @@
                             }}</p>
                         <div class="flex flex-row mt-5 justify-center gap-4" data-aos="fade-up" data-aos-delay="600"
                              data-aos-duration="750" data-aos-once="true">
-                            <ui-button-primary to="/download" :placeholder="$t('welcome.download')"/>
+                            <ui-button-primary @click="openModal" :placeholder="$t('welcome.download')"/>
                             <ui-button-primary to="/download" :placeholder="$t('welcome.create-account')"/>
                             <ui-button-primary to="/download" :placeholder="$t('welcome.join-in-community')"/>
                         </div>
@@ -55,7 +63,96 @@
         </div>
     </section>
     <common-spark/>
-    <ui-modal-primary>
-        <section><p>modal content here</p></section>
+    <ui-modal-primary ref="modalRef">
+        <section class="modal">
+            <h3>
+                {{ $t('welcome.modal.title') }}
+            </h3>
+            <span>
+                {{ $t('welcome.modal.description') }}
+            </span>
+            <span></span>
+            <div class="download-modal-container">
+                <div class="download-modal-container-download-type-card">
+                    <div class="download-modal-container-download-type-card-type">
+                        download with {{ $t('welcome.modal.google-disk') }}
+                    </div>
+                    <div>
+                        <ui-button-quaternary to="https://www.google.com/drive/" :external="true"
+                                              :placeholder="$t('welcome.download')"/>
+                    </div>
+                </div>
+                <div class="download-modal-container-download-type-or">
+                    <p>{{ $t('common.or') }}</p>
+                </div>
+                <div class="download-modal-container-download-type-card">
+                    <div class="download-modal-container-download-type-card-type">
+                        download with {{ $t('welcome.modal.mega') }}
+                    </div>
+                    <div>
+                        <ui-button-quaternary to="https://mega.io/?aff=Bp1QjAyT" :external="true"
+                                              :placeholder="$t('welcome.download')"/>
+                    </div>
+                </div>
+                <div class="download-modal-container-download-type-or">
+                    <p>{{ $t('common.or') }}</p>
+                </div>
+                <div class="download-modal-container-download-type-card">
+                    <div class="download-modal-container-download-type-card-type">
+                        download with {{ $t('welcome.modal.site') }}
+                    </div>
+                    <div>
+                        <ui-button-quaternary to="https://mega.io/?aff=Bp1QjAyT" :external="true"
+                                              :placeholder="$t('welcome.download')"/>
+                    </div>
+                </div>
+            </div>
+        </section>
     </ui-modal-primary>
 </template>
+
+<style scoped lang="less">
+.modal {
+    h3 {
+    @apply font-one-lord;
+    }
+
+    span {
+    @apply font-arpona-regular opacity-70;
+    }
+}
+
+.download-modal-container {
+@apply flex flex-col mt-5;
+
+    &-download-type-or {
+    @apply font-arpona-regular text-center my-2;
+    }
+
+    &-download-type-card {
+    @apply flex w-full justify-between relative z-10;
+        border-radius: 0.3rem;
+        background: linear-gradient(120deg, rgb(42, 34, 22), rgb(111, 81, 35));
+        
+        &:after {
+            content: "";
+            position: absolute;
+            border: 1rem solid transparent;
+            border-image: url(/img/frames/frame_square.png);
+            border-image-slice: 40 40 fill;
+            left: -0.1rem;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            top: -0.1rem;
+            pointer-events: none;
+            transition: 0.3s;
+            filter: brightness(130%);
+            z-index: 3;
+        }
+
+        &-type {
+        @apply px-5 py-4 text-white font-arpona-regular;
+        }
+    }
+}
+</style>

@@ -3,20 +3,17 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     ssr: true,
     devtools: {enabled: true},
-    app: {
-        // baseURL: '/lineage-frontend/'
-    },
-
+    
     modules: [
-      '@nuxt/image',
-      'nuxt-aos',
-      '@nuxtjs/i18n',
-      '@nuxtjs/tailwindcss',
-      '@nuxt/icon',
+        '@nuxt/image',
+        'nuxt-aos',
+        '@nuxtjs/i18n',
+        '@nuxtjs/tailwindcss',
+        '@nuxt/icon',
     ],
-    
+
     css: ['~/assets/css/_root.css', '~/assets/css/scrollbar.less'],
-    
+
     tailwindcss: {
         cssPath: ['~/assets/css/tailwind.css', {injectPosition: "first"}],
         configPath: 'tailwind.config',

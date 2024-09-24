@@ -20,7 +20,7 @@ const props = defineProps<Props>();
     </NuxtLink>
 </template>
 
-<style lang="less" scoped>
+<style scoped lang="less">
 .link {
 @apply px-2 py-1 flex opacity-50 font-arpona-regular hover:opacity-100 transition-opacity duration-300 text-nowrap;
 

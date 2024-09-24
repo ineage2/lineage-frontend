@@ -3,6 +3,7 @@ const localeRoute = useLocaleRoute();
 
 interface Props {
     to: string;
+    external?: boolean;
     placeholder: string;
 }
 
@@ -11,7 +12,7 @@ const props = defineProps<Props>();
 
 <template>
     <NuxtLink
-        v-if="props.to"
+        v-if="props.to && !props.external"
         :to="localeRoute(props.to)"
         class="button"
     >
@@ -19,11 +20,16 @@ const props = defineProps<Props>();
         <div><span></span><span></span></div>
         <div><span></span></div>
     </NuxtLink>
+    <a v-else class="button" :href="props.to" target="_blank">
+        {{ props.placeholder }}
+        <div><span></span><span></span></div>
+        <div><span></span></div>
+    </a>
 </template>
 
 <style scoped lang="less">
 .button {
-    @apply font-arpona-regular mx-auto flex items-center justify-center relative cursor-pointer;
+@apply font-arpona-regular mx-auto flex items-center justify-center relative cursor-pointer;
     width: 16rem;
     height: 3.2rem;
     font-size: 1rem;
