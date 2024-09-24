@@ -15,6 +15,9 @@
                 <li data-aos="fade-right" data-aos-duration="750" data-aos-delay="400">
                     <ui-button-secondary to="/" icon="bi:youtube"/>
                 </li>
+                <li data-aos="fade-right" data-aos-duration="750" data-aos-delay="500">
+                    <ui-button-secondary to="/" icon="bi:wifi"/>
+                </li>
             </ul>
         </div>
     </section>

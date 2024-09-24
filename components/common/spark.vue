@@ -145,10 +145,6 @@ export default {
 
 <style scoped>
 #sparks {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
+    @apply absolute top-0 w-full h-full bg-transparent;
 }
 </style>

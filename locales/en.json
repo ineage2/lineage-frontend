@@ -1,6 +1,11 @@
 {
     "welcome": {
-        "title": "Three countries, one goal - victory! Who will seize the throne in the world of Lineage 2?"
+        "title": "Three countries, one goal - victory!",
+        "description": "Join the epic battle of three powers in the world of Lineage 2! Choose your side, fight for honor and power, conquer territories and become a legend on the battlefield. Your fate is decided here!",
+        "start": "Just a few steps away to start your adventure",
+        "download": "Download",
+        "create-account": "Create account",
+        "join-in-community": "Join in community"
     },
     "header": {
         "home": "Home",

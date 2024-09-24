@@ -34,7 +34,15 @@
                         <h1 class="font-one-lord text-center">{{ $t('welcome.title') }}</h1>
                     </div>
                     <div class="pt-5 max-w-xl" data-aos="fade-up" data-aos-delay="400" data-aos-duration="750" data-aos-once="true">
-                        <h4 class="font-one-lord text-center">{{ $t('welcome.title') }}</h4>
+                        <h4 class="font-one-lord text-center">{{ $t('welcome.description') }}</h4>
+                    </div>
+                    <div class="pt-2 max-w-3xl z-10">
+                        <p class="font-arpona-regular text-opacity-70 text-white text-center"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="750" data-aos-once="true">{{ $t('welcome.start') }}</p>
+                        <div class="flex flex-row mt-5 justify-center gap-4"  data-aos="fade-up" data-aos-delay="600" data-aos-duration="750" data-aos-once="true">
+                            <ui-button-primary to="/download" :placeholder="$t('welcome.download')" />
+                            <ui-button-primary to="/download" :placeholder="$t('welcome.create-account')" />
+                            <ui-button-primary to="/download" :placeholder="$t('welcome.join-in-community')" />
+                        </div>
                     </div>
                 </div>
             </div>
