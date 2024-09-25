@@ -27,7 +27,6 @@ defineExpose({openModal, closeModal});
             <div
                 v-show="isVisible"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-
                 @click.self="closeModal">
                 <div class="modal-container" :style="'max-width:' + props.max + 'px'">
                     <div class="modal-container-top">

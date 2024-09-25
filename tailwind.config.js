@@ -4,10 +4,10 @@ export default {
     theme: {
         extend: {
             maxWidth: {
-                'big': 'calc(1920px - (162px * 2px))',
-                'medium': 'calc(1280px - (162px * 2px))',
-                'small': 'calc(1920px - (162px * 2px))',
-                'small2': 'calc(1920px - (162px * 2px))',
+                'big': '1700px',
+                'medium': '',
+                'small': '',
+                'small2': '',
             },
             colors: {
                 'vlada-color-1': '#070606',
@@ -15,14 +15,16 @@ export default {
                 'vlada-color-3': '#d8a774',
                 'vlada-color-4': '#252525',
                 'vlada-color-5': 'rgb(235, 230, 219)',
+                'vlada-color-6': '#373737',
             },
             fontFamily: {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],
                 'one-lord': ['one-lord', 'sans-serif'],
             },
             aspectRatio: {
-                '16/7': '16 / 5',
-                '4/3': '4 / 3',
+                '16-7': '16 / 7',
+                '16-8': '16 / 8',
+                '4-3': '4 / 3',
             },
         },
     },

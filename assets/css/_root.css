@@ -17,7 +17,7 @@ body {
 }
 
 .container-inner {
-    @apply xl:max-w-big lg:max-w-medium md:max-w-small mx-auto container px-3;
+    @apply mx-auto px-1 md:px-2 container max-w-big; 
 }
 
 /* h1 h6 */
