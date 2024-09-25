@@ -2,10 +2,10 @@
 import {ref} from 'vue';
 import UiModalPrimary from '@/components/ui/modal/primary.vue';
 
+const {setLocale} = useI18n();
 const languageRef = ref(null);
 
 const openModal = () => {
-    console.log("sex")
     languageRef.value.openModal();
 };
 </script>
@@ -41,17 +41,13 @@ const openModal = () => {
         </div>
     </section>
 
-    <ui-modal-primary ref="languageRef">
+    <ui-modal-primary ref="languageRef" :max="500" :title="$t('languages.title')">
         <section class="modal">
-            <h3>
-                wdwd
-            </h3>
-            <span>
-              wdwd
-            </span>
-            <span></span>
             <div class="download-modal-container">
-
+                <div @click="setLocale('en')">{{ $t('languages.english') }} / {{ $t('language-codes.english') }}</div>
+                <div @click="setLocale('ja')">{{ $t('languages.japanese') }} / {{ $t('language-codes.japanese') }}</div>
+                <div @click="setLocale('ru')">{{ $t('languages.russian') }} / {{ $t('language-codes.russian') }}</div>
+                <div @click="setLocale('zh')">{{ $t('languages.chinese') }} / {{ $t('language-codes.chinese') }}</div>
             </div>
         </section>
     </ui-modal-primary>

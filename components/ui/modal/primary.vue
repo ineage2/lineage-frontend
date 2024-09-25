@@ -2,7 +2,8 @@
 import {ref} from 'vue';
 
 interface Props {
-    max?: string;
+    title?: string;
+    max?: number;
 }
 
 const props = defineProps<Props>();
@@ -26,10 +27,11 @@ defineExpose({openModal, closeModal});
             <div
                 v-show="isVisible"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-           
+
                 @click.self="closeModal">
                 <div class="modal-container" :style="'max-width:' + props.max + 'px'">
-                    <div class="flex items-center justify-end">
+                    <div class="modal-container-top">
+                        <h3>{{ props.title }}</h3>
                         <ui-button-tertiary icon="bi:x-lg" @click="closeModal"/>
                     </div>
                     <slot></slot>
@@ -41,24 +43,27 @@ defineExpose({openModal, closeModal});
 
 <style scoped lang="less">
 .modal-container {
-@apply px-4 py-3 relative mx-auto;
-    background-color: rgb(235, 230, 219);
-}
+@apply px-4 py-3 relative mx-auto bg-vlada-color-5;
 
-.modal-container:after {
-    content: "";
-    position: absolute;
-    border: 1rem solid transparent;
-    border-image: url(/img/frames/frame_with-point.png);
-    border-image-slice: 40 40 fill;
-    left: -0.6rem;
-    z-index: 2;
-    right: -0.6rem;
-    bottom: -0.6rem;
-    top: -0.6rem;
-    filter: brightness(120%);
-    pointer-events: none;
-    transition: 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        border: 1rem solid transparent;
+        border-image: url(/img/frames/frame_with-point.png);
+        border-image-slice: 40 40 fill;
+        left: -0.6rem;
+        z-index: 2;
+        right: -0.6rem;
+        bottom: -0.6rem;
+        top: -0.6rem;
+        filter: brightness(120%);
+        pointer-events: none;
+        transition: 0.3s;
+    }
+    
+    &-top {
+        @apply flex items-center justify-between font-one-lord gap-5 mb-4;
+    }
 }
 
 .v-enter-active,

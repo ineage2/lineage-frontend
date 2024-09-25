@@ -13,11 +13,13 @@ export default {
                 'vlada-color-1': '#070606',
                 'vlada-color-2': '#dcbb8f',
                 'vlada-color-3': '#d8a774',
-                'vlada-color-4': '#252525'
+                'vlada-color-4': '#252525',
+                'vlada-color-5': 'rgb(235, 230, 219)',
             },
             fontFamily: {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],
-                'one-lord': ['one-lord', 'sans-serif'],},
+                'one-lord': ['one-lord', 'sans-serif'],
+            },
             aspectRatio: {
                 '16/7': '16 / 5',
                 '4/3': '4 / 3',
