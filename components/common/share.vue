@@ -41,13 +41,26 @@ const openModal = () => {
         </div>
     </section>
 
-    <ui-modal-primary ref="languageRef" :max="500" :title="$t('languages.title')">
+    <ui-modal-primary ref="languageRef" :max="400" :title="$t('languages.title')">
         <section class="modal">
             <div class="download-modal-container">
-                <div @click="setLocale('en')">{{ $t('languages.english') }} / {{ $t('language-codes.english') }}</div>
-                <div @click="setLocale('ja')">{{ $t('languages.japanese') }} / {{ $t('language-codes.japanese') }}</div>
-                <div @click="setLocale('ru')">{{ $t('languages.russian') }} / {{ $t('language-codes.russian') }}</div>
-                <div @click="setLocale('zh')">{{ $t('languages.chinese') }} / {{ $t('language-codes.chinese') }}</div>
+                <button @click="setLocale('en')">
+                    <nuxt-img class="download-modal-container-button-image"
+                              src="/img/flags/united-kingdom-flag-icon.png"/>
+                    {{ $t('languages.english') }} / {{ $t('language-codes.english') }}
+                </button>
+                <button @click="setLocale('ja')">
+                    <nuxt-img class="download-modal-container-button-image" src="/img/flags/japan-flag-icon.png"/>
+                    {{ $t('languages.japanese') }} / {{ $t('language-codes.japanese') }}
+                </button>
+                <button @click="setLocale('ru')">
+                    <nuxt-img class="download-modal-container-button-image" src="/img/flags/russia-flag-icon.png"/>
+                    {{ $t('languages.russian') }} / {{ $t('language-codes.russian') }}
+                </button>
+                <button @click="setLocale('zh')">
+                    <nuxt-img class="download-modal-container-button-image" src="/img/flags/china-flag-icon.png"/>
+                    {{ $t('languages.chinese') }} / {{ $t('language-codes.chinese') }}
+                </button>
             </div>
         </section>
     </ui-modal-primary>
@@ -72,5 +85,17 @@ const openModal = () => {
 
 .right {
 @apply right-0;
+}
+
+.download-modal-container {
+@apply w-full flex flex-col;
+
+    button {
+    @apply w-full flex gap-3 mb-2 font-arpona-regular bg-vlada-color-3 px-2 py-1 rounded;
+        
+        .download-modal-container-button-image {
+        @apply w-6 h-6;
+        }
+    }
 }
 </style>
