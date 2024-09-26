@@ -30,7 +30,6 @@ const props = defineProps<Props>();
                                 <p>{{ props.type }}</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

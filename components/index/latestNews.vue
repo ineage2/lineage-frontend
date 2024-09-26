@@ -8,7 +8,7 @@
             <div class="statistics-header">
                 <h3 data-aos="fade-left">🗞️{{ $t('welcome.latest-news.title') }}</h3>
             </div>
-            <div class="statistics-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+            <div class="statistics-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                 <ui-card-news-primary
                     title="Celebrate the Fall Season"
                     image="https://cdn.ncwest.com/cms/oucarar1/200812-l2-news-header-tales-untold-announce.jpg"

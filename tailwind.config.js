@@ -21,6 +21,9 @@ export default {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],
                 'one-lord': ['one-lord', 'sans-serif'],
             },
+            opacity: {
+                '2': '0.02'
+            },
             aspectRatio: {
                 '16-7': '16 / 7',
                 '16-8': '16 / 8',

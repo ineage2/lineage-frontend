@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-    height: '20' | '40' | '80';
+    height: '10' | '20' | '40' | '80';
 }
 
 const props = defineProps<Props>();
@@ -11,6 +11,10 @@ const props = defineProps<Props>();
 </template>
 
 <style scoped lang="less">
+.vlada-br-10 {
+@apply mb-10;
+}
+
 .vlada-br-20 {
 @apply mb-20;
 }

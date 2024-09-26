@@ -6,33 +6,11 @@
     <section class="statistics">
         <div class="statistics-inner container-inner">
             <div class="statistics-header">
-                <h2 data-aos="fade-left" data-aos-once="true">🏆{{ $t('statistics.title') }}</h2>
-                <div>
-
-                </div>
+                <h3 data-aos="fade-left">🏆{{ $t('statistics.title') }}</h3>
             </div>
-            <div class="statistics-content">
-                <ui-card-primary>
-                    <div class="statistics-card">
-                        <div class="statistics-card-title">
-                            <h3>TOP PVP</h3>
-                        </div>
-                    </div>
-                </ui-card-primary>
-                <ui-card-primary>
-                    <div class="statistics-card">
-                        <div class="statistics-card-title">
-                            <h3>TOP EXP</h3>
-                        </div>
-                    </div>
-                </ui-card-primary>
-                <ui-card-primary>
-                    <div class="statistics-card">
-                        <div class="statistics-card-title">
-                            <h3>TOP CLAN</h3>
-                        </div>
-                    </div>
-                </ui-card-primary>
+            <div class="statistics-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+              <ui-card-statistics-primary title="Top 10 pvp"/>
+                <ui-card-statistics-primary title="Top 10 clans"/>
             </div>
         </div>
     </section>
@@ -45,15 +23,13 @@
     &-header {
     @apply w-full mb-5;
 
-        h2 {
+        h3 {
         @apply font-one-lord;
         }
     }
 
     &-content {
-    @apply flex gap-10 w-full justify-between;
+    @apply flex gap-5 w-full justify-between;
     }
-
-
 }
 </style>
