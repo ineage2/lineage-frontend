@@ -13,11 +13,14 @@ const props = defineProps<Props>();
         </div>
         <div class="card-content">
             <table>
+                <thead>
                 <tr>
                     <th>№</th>
                     <th>one</th>
                     <th>two</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>Peter</td>
                     <td>Peter</td>
@@ -68,6 +71,7 @@ const props = defineProps<Props>();
                     <td>Peter</td>
                     <td>Griffin</td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </ui-card-primary>
