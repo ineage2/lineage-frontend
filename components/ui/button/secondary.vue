@@ -19,21 +19,16 @@ const props = defineProps<Props>();
         <Icon :name="props.icon" class="button-icon"/>
     </NuxtLink>
     <a v-else class="button" :href="props.to" target="_blank">
-         <Icon :name="props.icon" class="button-icon"/>
+        <Icon :name="props.icon" class="button-icon"/>
     </a>
 </template>
 
 <style lang="less" scoped>
 .button {
-@apply flex;
-    text-decoration: none;
+@apply flex cursor-pointer items-center justify-center relative transition-all duration-200;
     color: wheat;
     width: 2.5rem;
     height: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: 0.2s;
 }
 
 .button:hover::after {
