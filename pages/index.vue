@@ -6,12 +6,11 @@
     <common-header/>
     <common-share/>
     <index-primary-header/>
-    <index-latest-news/>
-    <ui-br height="10"/>
     <index-statistics/>
-    <div class="bg-vlada-color-primary w-full h-dvh">
-
-    </div>
+    <ui-br height="10"/>
+    <index-latest-news/>
+    <ui-br height="40"/>
+    <common-footer/>
 </template>
 
 <style scoped>

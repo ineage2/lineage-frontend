@@ -48,5 +48,12 @@
         "shop": "Магазин",
         "download": "Скачать",
         "knowledge-base": "База знаний"
+    },
+    "footer": {
+        "contact-us": "Свяжитесь с нами",
+        "our-services": "Наши услуги",
+        "privacy-policy": "Политика конфиденциальности",
+        "terms-and-conditions": "Правила и условия",
+        "copyright": "Авторское право © 2024 - Все права защищены || Дизайн: VAHE❤"
     }
 }

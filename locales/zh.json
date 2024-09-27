@@ -48,5 +48,12 @@
         "shop": "商城",
         "download": "下载",
         "knowledge-base": "知识库"
+    },
+    "footer": {
+        "contact-us": "联系我们",
+        "our-services": "我们的服务",
+        "privacy-policy": "隐私政策",
+        "terms-and-conditions": "条款与条件",
+        "copyright": "版权 © 2024 - 保留所有权利 || 设计者: VAHE❤"
     }
 }
