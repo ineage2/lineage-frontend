@@ -15,16 +15,16 @@
             <div class="footer-files-links">
                 <ul>
                     <li>
-                        <ui-link-primary to="/doc/" size="base" :placeholder="$t('footer.contact-us')"/>
+                        <ui-link-primary to="/" size="base" :placeholder="$t('footer.contact-us')"/>
                     </li>
                     <li>
-                        <ui-link-primary to="/doc/" size="base" :placeholder="$t('footer.our-services')"/>
+                        <ui-link-primary to="/" size="base" :placeholder="$t('footer.our-services')"/>
                     </li>
                     <li>
-                        <ui-link-primary to="/doc/" size="base" :placeholder="$t('footer.privacy-policy')"/>
+                        <ui-link-primary to="/" size="base" :placeholder="$t('footer.privacy-policy')"/>
                     </li>
                     <li>
-                        <ui-link-primary to="/doc/" size="base" :placeholder="$t('footer.terms-and-conditions')"/>
+                        <ui-link-primary to="/" size="base" :placeholder="$t('footer.terms-and-conditions')"/>
                     </li>
                 </ul>
             </div>

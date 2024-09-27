@@ -2,9 +2,8 @@
 interface Props {
     title: string;
     image: string;
-    date: string;
     type: string;
-    modeColor: string;
+    date: string;
 }
 
 const props = defineProps<Props>();
