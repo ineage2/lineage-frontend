@@ -6,11 +6,15 @@
     <section class="statistics">
         <div class="statistics-inner container-inner">
             <div class="statistics-header">
-                <h3 data-aos="fade-left">🏆{{ $t('statistics.title') }}</h3>
+                <h3 data-aos="fade-left">🏆{{ $t('welcome.statistics.title') }}</h3>
             </div>
             <div class="statistics-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
-              <ui-card-statistics-primary title="Top 10 pvp"/>
+                <ui-card-statistics-primary title="Top 10 pvp"/>
                 <ui-card-statistics-primary title="Top 10 clans"/>
+                <ui-card-statistics-primary title="Top 10 xp"/>
+            </div>
+            <div class="statistics-bottom">
+                
             </div>
         </div>
     </section>

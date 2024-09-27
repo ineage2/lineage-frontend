@@ -35,6 +35,14 @@
         "latest-news": {
             "title": "Latest news",
             "description": "Stay updated with the latest developments on the server! Read about upcoming events, balance changes, new content releases, and more."
+        },
+        "statistics": {
+            "title": "Statistics",
+            "description": "Explore the detailed statistics of the server! Check player rankings, battle outcomes, territory conquests, and more. Stay informed about your performance and that of your rivals!",
+            "name": "Name",
+            "reputation": "Reputation",
+            "pvp": "PVP",
+            "pk": "PK"
         }
     },
     "header": {
@@ -44,8 +52,5 @@
         "shop": "Shop",
         "download": "Download",
         "knowledge-base": "Knowledge base"
-    },
-    "statistics": {
-        "title": "Statistics"
     }
 }
