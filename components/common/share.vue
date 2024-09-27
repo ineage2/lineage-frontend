@@ -41,7 +41,7 @@ const openModal = () => {
         </div>
     </section>
 
-    <ui-modal-primary ref="languageRef" :max="400" :title="$t('languages.title')">
+    <ui-modal-primary ref="languageRef" :max="400" :min="350" :title="$t('languages.title')">
         <section class="modal">
             <div class="download-modal-container">
                 <button @click="setLocale('en')">

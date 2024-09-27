@@ -2,8 +2,9 @@
 import {ref} from 'vue';
 
 interface Props {
-    title?: string;
-    max?: number;
+    title: string;
+    max: number;
+    min: number;
 }
 
 const props = defineProps<Props>();
@@ -28,7 +29,7 @@ defineExpose({openModal, closeModal});
                 v-show="isVisible"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 @click.self="closeModal">
-                <div class="modal-container" :style="'max-width:' + props.max + 'px'">
+                <div class="modal-container" :style="'max-width:' + props.max + 'px;' + 'min-width:' + props.min + 'px'">
                     <div class="modal-container-top">
                         <h3>{{ props.title }}</h3>
                         <ui-button-tertiary icon="bi:x-lg" @click="closeModal"/>

@@ -62,7 +62,7 @@ const openModal = () => {
         </div>
     </section>
     <common-spark/>
-    <ui-modal-primary ref="modalRef" max="700" :title="$t('welcome.modal.download-modal.title')">
+    <ui-modal-primary ref="modalRef" :max="700" :min="300" :title="$t('welcome.modal.download-modal.title')">
         <section class="modal">
             <span>
                 {{ $t('welcome.modal.download-modal.description') }}
