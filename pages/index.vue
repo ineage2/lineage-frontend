@@ -9,6 +9,8 @@
     <index-statistics/>
     <ui-br height="10"/>
     <index-latest-news/>
+    <ui-br height="10"/>
+    <index-var-timeout/>
     <ui-br height="40"/>
     <common-footer/>
 </template>

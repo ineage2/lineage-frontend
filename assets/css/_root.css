@@ -9,7 +9,7 @@
 }
 
 body {
-    @apply bg-vlada-color-1;
+    @apply bg-vlada-color-1 overflow-x-hidden
 }
 
 #__nuxt {
