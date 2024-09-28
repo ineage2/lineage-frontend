@@ -51,10 +51,10 @@
         }
 
         &-description {
-        @apply max-w-xl mt-5;
+        @apply max-w-2xl mt-5;
 
             h4 {
-            @apply text-white;
+            @apply text-white text-opacity-70;
             }
         }
     }

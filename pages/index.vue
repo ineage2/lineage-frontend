@@ -11,7 +11,7 @@
     <index-latest-news/>
     <ui-br height="10"/>
     <index-var-timeout/>
-    <ui-br height="40"/>
+    <ui-br height="10"/>
     <common-footer/>
 </template>
 
