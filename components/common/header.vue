@@ -31,19 +31,10 @@ onBeforeUnmount(() => {
                         <ui-link-primary size="base" to="/" :placeholder="$t('header.home')"/>
                     </li>
                     <li>
-                        <ui-link-primary size="base" to="/account" :placeholder="$t('header.account')"/>
-                    </li>
-                    <li>
-                        <ui-link-primary size="base" to="/download" :placeholder="$t('header.download')"/>
-                    </li>
-                    <li>
                         <ui-link-primary size="base" to="/news" :placeholder="$t('header.news')"/>
                     </li>
                     <li>
                         <ui-link-primary size="base" to="/shop" :placeholder="$t('header.shop')"/>
-                    </li>
-                    <li>
-                        <ui-link-primary size="base" to="/shop" :placeholder="$t('header.knowledge-base')"/>
                     </li>
                 </ul>
             </div>
