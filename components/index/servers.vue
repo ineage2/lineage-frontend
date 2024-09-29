@@ -52,9 +52,9 @@
 		h3 {
 		@apply font-one-lord;
 		}
-		
+
 		&-servers {
-			@apply h-52;
+		@apply h-52;
 
 		}
 	}
