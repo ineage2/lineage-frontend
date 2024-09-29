@@ -13,7 +13,7 @@
 				<ui-card-primary data-aos="fade-in" data-aos-delay="200" data-aos-duration="500">
 					<div class="servers-status-title-servers">
 						<div>
-							<p class="text-white">wdwdowhdowhdoiwhd</p>
+							<p class="text-white">тут будет информация о сервере который я получу из бэкенда</p>
 						</div>
 					</div>
 				</ui-card-primary>
