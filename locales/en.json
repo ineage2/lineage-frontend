@@ -1,0 +1,66 @@
+{
+    "common": {
+        "name": "Saga Online",
+        "or": "Or"
+    },
+    "languages": {
+        "title": "Select language",
+        "english": "English",
+        "japanese": "日本語",
+        "russian": "Русский",
+        "chinese": "中文"
+    },
+    "language-codes": {
+        "english": "English",
+        "japanese": "Japanese",
+        "russian": "Russian",
+        "chinese": "Chinese"
+    },
+    "welcome": {
+        "title": "Three countries, one goal - victory!",
+        "description": "Join the epic battle of three powers in the world of Lineage 2! Choose your side, fight for honor and power, conquer territories and become a legend on the battlefield. Your fate is decided here!",
+        "start": "Just a few steps away to start your adventure",
+        "download": "Download",
+        "create-account": "Create account",
+        "join-in-community": "Join in community",
+        "modal": {
+            "download-modal": {
+                "title": "Download Launcher",
+                "description": "The launcher is your key to adventures in the world of epic fantasy! Download it to install the game, receive regular updates and enjoy flawless gaming experience.",
+                "google-disk": "Google disk",
+                "mega": "Mega",
+                "footer-text": "After downloading the launcher file, Launcher.exe, create a new folder and move the Launcher.exe file into it. Then run it as an administrator to avoid any possible access rights issues and ensure correct installation."
+            }
+        },
+        "servers": {
+            "servers-title": "Server status"
+        },
+        "latest-news": {
+            "title": "Latest news",
+            "description": "Stay updated with the latest developments on the server! Read about upcoming events, balance changes, new content releases, and more."
+        },
+        "statistics": {
+            "title": "Statistics",
+            "description": "Explore the detailed statistics of the server! Check player rankings, battle outcomes, territory conquests, and more. Stay informed about your performance and that of your rivals!",
+            "name": "Name",
+            "reputation": "Reputation",
+            "pvp": "PVP",
+            "pk": "PK"
+        }
+    },
+    "header": {
+        "home": "Home",
+        "account": "Account",
+        "news": "News",
+        "shop": "Shop",
+        "download": "Download",
+        "knowledge-base": "Knowledge base"
+    },
+    "footer": {
+        "contact-us": "Contact us",
+        "our-services": "Our Services",
+        "privacy-policy": "Privacy Policy",
+        "terms-and-conditions": "Terms & Conditions",
+        "copyright": "© Copyright 2024 all rights reserved"
+    }
+}

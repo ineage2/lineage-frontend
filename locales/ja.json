@@ -1,0 +1,59 @@
+{
+    "common": {
+        "name": "Saga Online",
+        "or": "または"
+    },
+    "languages": {
+        "title": "Select language",
+        "english": "English",
+        "japanese": "日本語",
+        "russian": "Русский",
+        "chinese": "中文"
+    },
+    "language-codes": {
+        "english": "英語",
+        "japanese": "日本語",
+        "russian": "ロシア語",
+        "chinese": "中国語"
+    },
+    "welcome": {
+        "title": "三国一体、目指すは勝利！",
+        "description": "リネージュ2の世界で、三つの勢力の壮大な戦いに参加しよう！自分の側を選び、名誉と力のために戦い、領土を征服し、戦場の伝説となれ。あなたの運命はここで決まる！",
+        "start": "冒険の始まりまであと少し",
+        "download": "ダウンロード",
+        "create-account": "アカウントを作成",
+        "join-in-community": "コミュニティに参加する",
+        "modal": {
+            "download-modal": {
+                "title": "ランチャーをダウンロード",
+                "description": "ランチャーは、壮大なファンタジーの世界への鍵です！ゲームをインストールし、定期的なアップデートを受け取り、完璧なゲーム体験を楽しむためにダウンロードしてください。",
+                "google-disk": "Googleディスク",
+                "mega": "メガ",
+                "footer-text": "ランチャーファイル「Launcher.exe」をダウンロードした後、新しいフォルダーを作成し、Launcher.exeファイルをその中に移動してください。その後、管理者として実行することで、アクセス権の問題を回避し、正しいインストールを確実に行えます。"
+            }
+        },
+        "latest-news": {
+            "title": "最新ニュース",
+            "description": "サーバーの最新情報をお見逃しなく！イベント、バランス調整、新しいコンテンツのリリースなどについての詳細をチェックしましょう。"
+        },
+        "statistics": {
+            "title": "統計",
+            "description": "サーバーの詳細な統計を確認しましょう！プレイヤーランキング、戦闘結果、領土の征服などをチェックしてください。自分のパフォーマンスとライバルの状況を把握しましょう！"
+        }
+    },
+    "header": {
+        "home": "ホーム",
+        "account": "アカウント",
+        "news": "ニュース",
+        "shop": "ショップ",
+        "download": "ダウンロード",
+        "knowledge-base": "知識ベース"
+    },
+    "footer": {
+        "contact-us": "お問い合わせ",
+        "our-services": "私たちのサービス",
+        "privacy-policy": "プライバシーポリシー",
+        "terms-and-conditions": "利用規約",
+        "copyright": "© 著作権 2024 - 全著作権所有"
+    }
+}

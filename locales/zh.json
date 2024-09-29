@@ -1,0 +1,59 @@
+{
+    "common": {
+        "name": "Saga Online",
+        "or": "或"
+    },
+    "languages": {
+        "title": "选择语言",
+        "english": "English",
+        "japanese": "日本語",
+        "russian": "Русский",
+        "chinese": "中文"
+    },
+    "language-codes": {
+        "english": "英语",
+        "japanese": "日语",
+        "russian": "俄语",
+        "chinese": "中文"
+    },
+    "welcome": {
+        "title": "三国一志，目标胜利！",
+        "description": "加入《天堂2》世界中三大势力的史诗战斗！选择你的阵营，为荣誉与力量而战，征服领土，成为战场上的传奇。你的命运将在这里决定！",
+        "start": "离冒险之旅只有几步之遥",
+        "download": "下载",
+        "create-account": "创建账户",
+        "join-in-community": "加入社区",
+        "modal": {
+            "download-modal": {
+                "title": "下载启动器",
+                "description": "启动器是你进入史诗幻想世界的钥匙！下载它来安装游戏，定期接收更新，并享受无缝的游戏体验。",
+                "google-disk": "Google 云盘",
+                "mega": "Mega",
+                "footer-text": "下载启动器文件Launcher.exe后，创建一个新文件夹，并将Launcher.exe文件移至其中。然后以管理员身份运行它，以避免可能的权限问题并确保正确安装。"
+            }
+        },
+        "latest-news": {
+            "title": "最新新闻",
+            "description": "了解服务器的最新动态！查看即将到来的活动、平衡性调整、新内容发布等详情。"
+        },
+        "statistics": {
+            "title": "统计",
+            "description": "探索服务器的详细统计数据！查看玩家排名、战斗结果、领土征服等信息。了解自己的表现和竞争对手的情况！"
+        }
+    },
+    "header": {
+        "home": "主页",
+        "account": "账户",
+        "news": "新闻",
+        "shop": "商城",
+        "download": "下载",
+        "knowledge-base": "知识库"
+    },
+    "footer": {
+        "contact-us": "联系我们",
+        "our-services": "我们的服务",
+        "privacy-policy": "隐私政策",
+        "terms-and-conditions": "条款与条件",
+        "copyright": "© 版权 2024 - 保留所有权利"
+    }
+}
