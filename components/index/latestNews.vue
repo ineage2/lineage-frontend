@@ -11,25 +11,25 @@
             <div class="statistics-content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                 <ui-card-news-primary
                     title="Celebrate the Fall Season"
-                    image="https://cdn.ncwest.com/cms/oucarar1/200812-l2-news-header-tales-untold-announce.jpg"
+                    image="/img/bin/1.jpg"
                     type="Events"
                     date="24.6.2024"
                 />
                 <ui-card-news-primary
                     title="Gather Rewards Every Day"
-                    image="https://cdn.ncwest.com/cms/tylfrqna/221014-l2-news-header-patch-notes.jpg"
+                    image="/img/bin/2.jpg"
                     type="Events"
                     date="12.4.2024"
                 />
                 <ui-card-news-primary
                     title="Special Crafting to Celebrate the Season"
-                    image="https://cdn.ncwest.com/cms/wpbe5zxe/01_newsheader_1920x800-19th-anniversary-advance-gift.jpg"
+                    image="/img/bin/3.jpg"
                     type="Events"
                     date="29.3.2024"
                 />
                 <ui-card-news-primary
                     title="Join the Fall Festival"
-                    image="https://cdn.ncwest.com/cms/f2dppywp/181003-l2-news-articleheader-classic-launch-events-1920x800.jpg"
+                    image="/img/bin/4.jpg"
                     type="Events"
                     date="01.12.2023"
                 />
