@@ -6,6 +6,8 @@
     <common-header/>
     <common-share/>
     <index-primary-header/>
+    <index-servers/>
+    <ui-br height="10"/>
     <index-statistics/>
     <ui-br height="10"/>
     <index-latest-news/>

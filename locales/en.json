@@ -32,6 +32,9 @@
                 "footer-text": "After downloading the launcher file, Launcher.exe, create a new folder and move the Launcher.exe file into it. Then run it as an administrator to avoid any possible access rights issues and ensure correct installation."
             }
         },
+        "servers": {
+            "servers-title": "Server status"
+        },
         "latest-news": {
             "title": "Latest news",
             "description": "Stay updated with the latest developments on the server! Read about upcoming events, balance changes, new content releases, and more."
