@@ -14,7 +14,7 @@ export default {
     methods: {
         loadParticles() {
             const script = document.createElement('script');
-            script.src = 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+            script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
             script.onload = () => {
                 this.$nextTick(() => {
                     this.initParticles();
