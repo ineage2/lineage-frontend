@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div data-aos="fade-in" data-aos-delay="500" data-aos-duration="750">
-                <ui-timer-countdown-timer-primary :time="250000"/>
+                <ui-timer-countdown-timer :time="250000"/>
             </div>
         </div>
     </section>
