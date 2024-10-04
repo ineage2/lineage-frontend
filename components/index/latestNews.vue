@@ -27,11 +27,12 @@ const fetchNews = async () => {
     loading.value = true;
     try {
         const response = await NewsService.index(4, 1, {
+            'Content-Type': 'application/json',
             'X-Fields': 'id,title,created_at,image_url,tag'
         });
         newsList.value = response.data.message.data;
     } catch (error) {
-        console.error('Ошибка при загрузке новостей:', error);
+        console.error(error);
     } finally {
         loading.value = false;
     }
