@@ -8,6 +8,7 @@ interface NewsItem {
     created_at: string;
     image_url: string;
     tag: string;
+    tags: Array<{ id: number; title: string }>;
 }
 
 const newsList = ref<NewsItem[]>([]);
@@ -28,7 +29,7 @@ const fetchNews = async () => {
     try {
         const response = await NewsService.index(4, 1, {
             'Content-Type': 'application/json',
-            'X-Fields': 'id,title,created_at,image_url,tag'
+            'X-Fields': 'id,title,created_at,image_url,tags,tags.id,tags.title'
         });
         newsList.value = response.data.message.data;
     } catch (error) {
@@ -74,7 +75,12 @@ onMounted(() => {
                         <div class="text-white">
                             <h4 class="mb-2">{{ news.title }}</h4>
                             <div class="flex flex-col gap-2">
-                                <span>{{ news.tag }}</span>
+                                <div class="flex gap-2">
+                                    <span v-for="tag in news.tags" :key="tag.id"
+                                          class="bg-white bg-opacity-10  text-xs text-white px-5 py-1 rounded"> {{
+                                            tag.title
+                                        }}</span>
+                                </div>
                                 <div class="card-content-other-time-and-type-type">
                                     <span>
                                           {{
