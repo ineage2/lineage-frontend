@@ -25,7 +25,7 @@ const props = defineProps<Props>();
 @apply px-2 py-1 flex opacity-50 font-arpona-regular hover:opacity-100 transition-opacity duration-300 text-nowrap;
 
     &-text {
-    @apply select-none pointer-events-none text-white;
+    @apply select-none pointer-events-none;
     }
 
     &-active {

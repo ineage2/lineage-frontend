@@ -10,7 +10,7 @@ export default {
                 'small2': '',
             },
             colors: {
-                'vlada-color-1': '#070606',
+                'vlada-color-1': '#ffffff',
                 'vlada-color-2': '#dcbb8f',
                 'vlada-color-3': '#d8a774',
                 'vlada-color-4': '#252525',
