@@ -12,10 +12,10 @@
     <index-latest-news/>
     <!--    <ui-br height="10"/>-->
     <!--    <index-statistics/>-->
-        <ui-br height="10"/>
-        <index-var-timeout/>
-        <ui-br height="10"/>
-        <common-footer/>
+    <ui-br height="10"/>
+    <index-var-timeout/>
+    <ui-br height="10"/>
+    <common-footer/>
 </template>
 
 <style scoped>

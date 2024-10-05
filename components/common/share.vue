@@ -91,7 +91,7 @@ const openModal = () => {
 @apply w-full flex flex-col;
 
     button {
-    @apply w-full flex gap-3 mb-2 font-arpona-regular bg-vlada-color-3 px-2 py-1 rounded;
+    @apply w-full flex gap-3 mb-2 font-arpona-regular  px-2 py-1 rounded;
         
         .download-modal-container-button-image {
         @apply w-6 h-6;

@@ -43,7 +43,7 @@ defineExpose({openModal, closeModal});
 
 <style scoped lang="less">
 .modal-container {
-@apply px-4 py-3 relative mx-auto bg-vlada-color-5;
+@apply px-4 py-3 relative mx-auto bg-vlada-color-1;
 
     &:after {
         content: "";

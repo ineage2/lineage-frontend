@@ -9,13 +9,13 @@ export default {
                 'small': '',
                 'small2': '',
             },
+            backgroundImage: {
+                'vlada-gradient-1': 'linear-gradient(0deg, rgba(249, 250, 251, 1) 2%, rgba(249, 250, 251, 0.5) 20%, rgba(249,0,0,0) 80%);',
+            },
             colors: {
-                'vlada-color-1': '#ffffff',
-                'vlada-color-2': '#dcbb8f',
-                'vlada-color-3': '#d8a774',
-                'vlada-color-4': '#252525',
-                'vlada-color-5': 'rgb(235, 230, 219)',
-                'vlada-color-6': '#373737',
+                'vlada-color-1': '#dcbb8f',
+                'vlada-color-2': '#d8a774',
+                'vlada-color-3': '#e6c39b',
             },
             fontFamily: {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],

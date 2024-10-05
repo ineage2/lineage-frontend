@@ -9,11 +9,11 @@
 }
 
 body {
-    @apply bg-vlada-color-1 overflow-x-hidden
+    @apply bg-slate-50 overflow-x-hidden
 }
 
 #__nuxt {
-    @apply overflow-hidden bg-vlada-color-1;
+    @apply overflow-hidden;
 }
 
 .container-inner {

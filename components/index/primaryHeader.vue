@@ -13,11 +13,10 @@ const openModal = () => {
     <section class="w-dvw h-dvh relative">
         <div class="relative w-full h-full">
             <!--<nuxt-img src="/img/spark/spark-bg.png" class="w-dvw h-dvh absolute z-10 object-cover pointer-events-none"/>-->
-            <nuxt-img src="/img/backgrounds/bg-2.jpg" class="w-dvw h-dvh absolute object-cover pointer-events-none"
+            <nuxt-img src="/img/backgrounds/bg-6.jpg" class="w-dvw h-dvh absolute object-cover pointer-events-none"
                       data-aos="fade-in" data-aos-once="true"/>
 
-            <div class="w-dvw h-60 absolute bottom-0 z-10"
-                 style="background: linear-gradient(0deg, rgba(255,255,255, 1) 2%, rgba(255,255,255,0.5) 40%, rgba(255,0,0,0) 100%);"
+            <div class="w-dvw h-60 absolute bottom-0 z-10 bg-vlada-gradient-1"
                  data-aos="fade-in"
                  data-aos-delay="100">
             </div>
@@ -36,20 +35,21 @@ const openModal = () => {
             <div class="overflow-hidden w-dvw h-dvh relative block container max-w-5xl mx-auto px-2">
                 <div class="relative flex flex-col w-full h-full items-center justify-center">
                     <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
-                        <nuxt-img src="/img/logos/logo.png" class="w-[300px] lg:w-[500px]"/>
+                        <nuxt-img src="/img/logos/logo.png"
+                                  class="w-[300px] lg:w-[500px] pointer-events-none select-none"/>
                     </div>
                     <div class="pt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="750"
                          data-aos-once="true">
-                        <h1 class="font-one-lord text-center text-black uppercase text-nowrap">{{
+                        <h1 class="font-one-lord text-center text-white uppercase text-nowrap">{{
                                 $t('welcome.title')
                             }}</h1>
                     </div>
                     <div class="pt-5 max-w-3xl" data-aos="fade-up" data-aos-delay="400" data-aos-duration="750"
                          data-aos-once="true">
-                        <h4 class="font-one-lord text-center text-black font-bold">{{ $t('welcome.description') }}</h4>
+                        <h4 class="font-one-lord text-center text-white opacity-70">{{ $t('welcome.description') }}</h4>
                     </div>
                     <div class="pt-2 max-w-3xl z-10">
-                        <p class="font-arpona-regular text-opacity-70 text-black text-center" data-aos="fade-up"
+                        <p class="font-arpona-regular text-opacity-70 text-white text-center" data-aos="fade-up"
                            data-aos-delay="500" data-aos-duration="750" data-aos-once="true">{{
                                 $t('welcome.start')
                             }}</p>
@@ -64,7 +64,7 @@ const openModal = () => {
             </div>
         </div>
     </section>
-    <!--<common-spark/>-->
+    <common-spark/>
     <ui-modal-primary ref="modalRef" :max="700" :min="300" :title="$t('welcome.modal.download-modal.title')">
         <section class="modal">
             <span>

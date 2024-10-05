@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 }
 
 .header-scrolled {
-@apply bg-vlada-color-1 shadow-xl;
+@apply shadow-xl bg-vlada-color-1;
 
     li {
     @apply text-black;
