@@ -14,16 +14,6 @@ interface NewsItem {
 const newsList = ref<NewsItem[]>([]);
 const loading = ref(false);
 
-const gridClasses = computed(() => {
-    const length = newsList.value.length;
-    return {
-        'grid-cols-1': length <= 1,
-        'grid-cols-2': length > 1,
-        'md:grid-cols-3': length > 2,
-        'lg:grid-cols-4': length > 3
-    };
-});
-
 const fetchNews = async () => {
     loading.value = true;
     try {
@@ -48,26 +38,24 @@ onMounted(() => {
     <section class="w-full">
         <div class="container-inner">
             <div class="w-full mb-5">
-                <h3 class="font-one-lord mb-2" data-aos="fade-left">
+                <h3 class="font-one-lord mb-2" data-aos="fade-left" data-aos-duration="700">
                     🗞️{{ $t('welcome.latest-news.title') }}
                 </h3>
-                <div data-aos="fade-in" data-aos-delay="200" data-aos-duration="500">
-                      <span class="font-one-lord text-white text-opacity-70">
+                <div data-aos="fade-in" data-aos-delay="200" data-aos-duration="700">
+                      <span class="font-one-lord text-opacity-70">
                     {{ $t('welcome.latest-news.description') }}
                 </span>
                 </div>
             </div>
             <div
-                class="grid gap-5 w-full"
+                class="grid gap-5 w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                data-aos-duration="500"
-                :class="gridClasses"
+                data-aos-duration="700"
             >
                 <section
-                    class="rounded-lg overflow-hidden cursor-pointer relative transition-all bottom-0 duration-300 hover:bg-vlada-color-6 hover:bottom-3"
-                    v-for="news in newsList" :key="news.id"
-                >
+                    class="bg-gray-100 rounded-lg overflow-hidden cursor-pointer relative transition-all bottom-0 duration-300 hover:bg-black hover:bg-opacity-10 hover:bottom-3"
+                    v-for="news in newsList" :key="news.id">
                     <div class="overflow-hidden relative aspect-16-8 object-cover">
                         <NuxtImg class="w-full h-full" :src="news.image_url" loading="lazy"/>
                     </div>
@@ -77,11 +65,11 @@ onMounted(() => {
                             <div class="flex flex-col gap-2">
                                 <div class="flex gap-2">
                                     <span v-for="tag in news.tags" :key="tag.id"
-                                          class="bg-white bg-opacity-10  text-xs text-white px-5 py-1 rounded"> {{
+                                          class="bg-black bg-opacity-10 text-sm font-arpona-regular text-black px-5 py-1 rounded"> {{
                                             tag.title
                                         }}</span>
                                 </div>
-                                <div class="card-content-other-time-and-type-type">
+                                <div class="text-black">
                                     <span>
                                           {{
                                             new Intl.DateTimeFormat($i18n.locale, {
