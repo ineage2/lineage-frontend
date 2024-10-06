@@ -3,7 +3,12 @@
 </script>
 
 <template>
-    <NuxtPage/>
+    <common-header/>
+    <main>
+        <slot/>
+    </main>
+    <ui-br height="20"/>
+    <lazy-common-footer/>
 </template>
 
 <style scoped>

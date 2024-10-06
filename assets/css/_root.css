@@ -8,8 +8,20 @@
     src: url(assets/fonts/TheOneLord.woff);
 }
 
+* {
+    @apply transition-colors duration-500;
+}
+
 body {
-    @apply bg-slate-50 overflow-x-hidden
+    @apply overflow-x-hidden;
+}
+
+.light-mode body {
+    @apply bg-slate-50 
+}
+
+.dark-mode body {
+    @apply bg-zinc-900;
 }
 
 #__nuxt {
@@ -22,7 +34,7 @@ body {
 
 /* h1 h6 */
 h1, h2, h3, h4, h5, h6 {
-    @apply transition-colors text-vlada-color-2;
+    @apply transition-colors text-vlada-color-2 font-one-lord;
 }
 
 h1 {

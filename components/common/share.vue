@@ -1,12 +1,33 @@
 <script setup lang="ts">
-import {ref} from 'vue';
+import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import UiModalPrimary from '@/components/ui/modal/primary.vue';
 
-const {setLocale} = useI18n();
+const { setLocale } = useI18n();
 const languageRef = ref(null);
+const colorMode = useColorMode();
+
+// Создаем локальную переменную для управления темой
+const themePreference = ref('system');
+
+onMounted(() => {
+    // Инициализируем локальную переменную значением из colorMode только на клиенте
+    themePreference.value = colorMode.preference;
+
+    // Обновляем colorMode на основании локального состояния при необходимости
+    colorMode.preference = themePreference.value;
+
+    console.log(colorMode.preference);
+});
 
 const openModal = () => {
     languageRef.value.openModal();
+};
+
+// Обновляем цветовую тему
+const changeTheme = (newPreference) => {
+    themePreference.value = newPreference;
+    colorMode.preference = newPreference;
 };
 </script>
 
@@ -34,8 +55,9 @@ const openModal = () => {
                     <ui-button-secondary @click="openModal" icon="bi:globe-americas"/>
                 </li>
                 <li data-aos="fade-left" data-aos-duration="750" data-aos-delay="300">
-                    <!--  need add logic )) -->
-                    <ui-button-secondary icon="bi:moon-fill" :external="true"/>
+                    <ui-button-secondary v-if="themePreference === 'system'" icon="bi:laptop-fill" @click="changeTheme('light')"/>
+                    <ui-button-secondary v-else-if="themePreference === 'light'" icon="bi:sun-fill" @click="changeTheme('dark')"/>
+                    <ui-button-secondary v-else icon="bi:moon-fill" @click="changeTheme('system')"/>
                 </li>
             </ul>
         </div>
@@ -45,8 +67,7 @@ const openModal = () => {
         <section class="modal">
             <div class="download-modal-container">
                 <button @click="setLocale('en')">
-                    <nuxt-img class="download-modal-container-button-image"
-                              src="/img/flags/united-kingdom-flag-icon.png"/>
+                    <nuxt-img class="download-modal-container-button-image" src="/img/flags/united-kingdom-flag-icon.png"/>
                     {{ $t('languages.english') }} / {{ $t('language-codes.english') }}
                 </button>
                 <button @click="setLocale('ja')">
@@ -91,8 +112,8 @@ const openModal = () => {
 @apply w-full flex flex-col;
 
     button {
-    @apply w-full flex gap-3 mb-2 font-arpona-regular  px-2 py-1 rounded;
-        
+    @apply w-full flex gap-3 mb-2 font-arpona-regular px-2 py-1 rounded;
+
         .download-modal-container-button-image {
         @apply w-6 h-6;
         }

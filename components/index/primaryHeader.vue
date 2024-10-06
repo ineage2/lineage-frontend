@@ -13,8 +13,9 @@ const openModal = () => {
     <section class="w-dvw h-dvh relative">
         <div class="relative w-full h-full">
             <!--<nuxt-img src="/img/spark/spark-bg.png" class="w-dvw h-dvh absolute z-10 object-cover pointer-events-none"/>-->
-            <nuxt-img src="/img/backgrounds/bg-6.jpg" class="w-dvw h-dvh absolute object-cover pointer-events-none"
-                      data-aos="fade-in" data-aos-once="true"/>
+            <div class="absolute w-full h-dvh bg-fixed bg-cover"
+                 style="background-image: url('/img/backgrounds/bg-6.jpg')">
+            </div>
 
             <div class="w-dvw h-60 absolute bottom-0 z-10 bg-vlada-gradient-1"
                  data-aos="fade-in"
@@ -56,8 +57,8 @@ const openModal = () => {
                         <div class="flex flex-row mt-5 justify-center gap-4" data-aos="fade-up" data-aos-delay="600"
                              data-aos-duration="750" data-aos-once="true">
                             <ui-button-primary @click="openModal" :placeholder="$t('welcome.download')"/>
-                            <ui-button-primary to="/download" :placeholder="$t('welcome.create-account')"/>
-                            <ui-button-primary to="/download" :placeholder="$t('welcome.join-in-community')"/>
+                            <ui-button-primary to="/" :placeholder="$t('welcome.create-account')"/>
+                            <ui-button-primary to="/" :placeholder="$t('welcome.join-in-community')"/>
                         </div>
                     </div>
                 </div>
