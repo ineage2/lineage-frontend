@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       '@nuxtjs/color-mode',
     ],
     
-    css: ['~/assets/css/_root.css', '~/assets/css/scrollbar.less'],
+    css: ['~/assets/css/_root.css', '~/assets/css/scrollbar.less', '~/assets/css/vlada.css'],
 
     tailwindcss: {
         cssPath: ['~/assets/css/tailwind.css', {injectPosition: "first"}],

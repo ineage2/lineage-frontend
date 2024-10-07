@@ -38,7 +38,7 @@ onMounted(() => {
 
 <template>
     <section class="w-full">
-        <div class="container-inner">
+        <div class="vlada-container">
             <div class="w-full mb-5">
                 <h2 class="font-one-lord mb-2 uppercase" data-aos="fade-left" data-aos-duration="700">
                     🗞️{{ $t('welcome.latest-news.title') }}

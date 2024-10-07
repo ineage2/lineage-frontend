@@ -1,0 +1,7 @@
+.vlada-container {
+    @apply mx-auto px-1 md:px-2 container max-w-big;
+}
+
+.vlada-transition {
+    @apply transition-all duration-300;
+}

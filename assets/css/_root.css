@@ -1,3 +1,5 @@
+@import url('tags/import.css');
+
 @font-face {
     font-family: arpona-regular;
     src: url(assets/fonts/Arpona-Regular.woff);
@@ -8,16 +10,12 @@
     src: url(assets/fonts/TheOneLord.woff);
 }
 
-* {
-    @apply transition-colors duration-500;
-}
-
 body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden transition-colors duration-500 font-arpona-regular;
 }
 
 .light-mode body {
-    @apply bg-slate-50 
+    @apply bg-slate-50
 }
 
 .dark-mode body {
@@ -26,10 +24,6 @@ body {
 
 #__nuxt {
     @apply overflow-hidden;
-}
-
-.container-inner {
-    @apply mx-auto px-1 md:px-2 container max-w-big; 
 }
 
 /* h1 h6 */
