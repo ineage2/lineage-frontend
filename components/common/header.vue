@@ -3,6 +3,7 @@ import throttle from 'lodash/throttle';
 import {ref, onMounted, onBeforeUnmount} from 'vue';
 
 const headerClass = ref('header-default');
+const isMobileMenuOpen = ref(false);
 
 const navLinks = [
     {to: "/", text: 'header.home'},
@@ -15,6 +16,10 @@ const navLinks = [
 const handleScroll = throttle(() => {
     headerClass.value = window.scrollY > 150 ? 'header-scrolled' : 'header-default';
 }, 200);
+
+const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
@@ -29,8 +34,20 @@ onBeforeUnmount(() => {
 <template>
     <header class="header vlada-transition" id="header" :class="headerClass">
         <div class="vlada-container header-inner">
+            <div>
+                <lazy-ui-button @click="toggleMobileMenu" type="primary" placeholder="Menu" icon="bi:moon-fill" icon-position="right" to="/" :external="false" />
+            </div>
+
             <ul class="header-inner-list" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
                 data-aos-once="true">
+                <li v-for="link in navLinks" :key="link.text">
+                    <lazy-ui-link :to="link.to">{{ $t(link.text) }}</lazy-ui-link>
+                </li>
+            </ul>
+        </div>
+        <div class="header-inner-mobile" v-if="isMobileMenuOpen">
+            <lazy-ui-button @click="toggleMobileMenu">{{ isMobileMenuOpen ? 'Close' : 'Menu' }}</lazy-ui-button>
+            <ul class="header-inner-mobile-list">
                 <li v-for="link in navLinks" :key="link.text">
                     <lazy-ui-link :to="link.to">{{ $t(link.text) }}</lazy-ui-link>
                 </li>
@@ -44,10 +61,22 @@ onBeforeUnmount(() => {
     @apply fixed w-full z-40 top-0 py-3;
 
     &-inner {
-        @apply flex justify-center;
+        @apply flex justify-center items-center;
 
         &-list {
-            @apply flex gap-4;
+            @apply gap-4 hidden md:flex;
+        }
+
+        &-mobile {
+            @apply flex md:hidden w-full bg-zinc-800 absolute top-0;
+
+            &-list {
+                @apply flex flex-col justify-center items-center w-full my-10;
+
+                li {
+                    @apply mb-5
+                }
+            }
         }
     }
 }
