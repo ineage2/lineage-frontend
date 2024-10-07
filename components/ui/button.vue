@@ -24,7 +24,7 @@ const getComponentType = computed(() => {
 
 const getComponentProps = computed(() => {
     if (props.to && !props.external) {
-        return {is: "nuxt-link", href: localeRoute(props.to)};
+        return {to: localeRoute(props.to)};
     } else if (props.to) {
         return {href: props.to, target: '_blank'};
     } else {

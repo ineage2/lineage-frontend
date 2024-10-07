@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       '@nuxtjs/tailwindcss',
       '@nuxt/icon',
       '@nuxtjs/color-mode',
+      '@nuxtjs/device',
     ],
     
     css: ['~/assets/css/_root.css', '~/assets/css/scrollbar.less', '~/assets/css/vlada.css'],

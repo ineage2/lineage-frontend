@@ -34,20 +34,8 @@ onBeforeUnmount(() => {
 <template>
     <header class="header vlada-transition" id="header" :class="headerClass">
         <div class="vlada-container header-inner">
-            <div>
-                <lazy-ui-button @click="toggleMobileMenu" type="primary" placeholder="Menu" icon="bi:moon-fill" icon-position="right" to="/" :external="false" />
-            </div>
-
             <ul class="header-inner-list" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
                 data-aos-once="true">
-                <li v-for="link in navLinks" :key="link.text">
-                    <lazy-ui-link :to="link.to">{{ $t(link.text) }}</lazy-ui-link>
-                </li>
-            </ul>
-        </div>
-        <div class="header-inner-mobile" v-if="isMobileMenuOpen">
-            <lazy-ui-button @click="toggleMobileMenu">{{ isMobileMenuOpen ? 'Close' : 'Menu' }}</lazy-ui-button>
-            <ul class="header-inner-mobile-list">
                 <li v-for="link in navLinks" :key="link.text">
                     <lazy-ui-link :to="link.to">{{ $t(link.text) }}</lazy-ui-link>
                 </li>
