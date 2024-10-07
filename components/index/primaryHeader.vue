@@ -10,36 +10,26 @@ const openModal = () => {
 </script>
 
 <template>
-    <section class="w-dvw h-dvh relative">
-        <div class="relative w-full h-full">
-            <!--<nuxt-img src="/img/spark/spark-bg.png" class="w-dvw h-dvh absolute z-10 object-cover pointer-events-none"/>-->
-            <div class="absolute w-full h-dvh bg-fixed bg-cover"
-                 style="background-image: url('/img/backgrounds/bg-6.jpg')">
+    <section class="primary-header" id="primary-header">
+        <div class="primary-header-inner">
+            <div class="vlada-transition primary-header-inner-background-image">
             </div>
 
-            <div class="w-dvw h-60 absolute bottom-0 z-10 bg-vlada-gradient-1"
-                 data-aos="fade-in"
-                 data-aos-delay="100">
+            <div
+                class="primary-header-inner-gradient primary-header-inner-gradient-top"
+                data-aos="fade-in"
+                data-aos-delay="100">
             </div>
 
-            <!--<div class="pt-32 overflow-hidden w-dvw h-dvh relative hidden xl:block">-->
-            <!--<div class="relative flex flex-row w-full h-full">-->
-            <!--<nuxt-img src="/img/characters/character-1.png"-->
-            <!--class="absolute h-full pointer-events-none right-[-200px] top-32 " style="scale: 1.3"-->
-            <!--data-aos="fade-left" data-aos-duration="1000"/>-->
-            <!--<nuxt-img src="/img/characters/character-3.png"-->
-            <!--class="absolute h-full pointer-events-none left-[-200px] top-28" style="scale: 1.4"-->
-            <!--data-aos="fade-right" data-aos-duration="1000"/>-->
-            <!--</div>-->
-            <!--</div>-->
-
+            <div
+                class="primary-header-inner-gradient primary-header-inner-gradient-bottom"
+                data-aos="fade-in"
+                data-aos-delay="100">
+            </div>
+            
             <div class="overflow-hidden w-dvw h-dvh relative block container max-w-5xl mx-auto px-2">
                 <div class="relative flex flex-col w-full h-full items-center justify-center">
-                    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
-                        <nuxt-img src="/img/logos/logo.png"
-                                  class="w-[300px] lg:w-[500px] pointer-events-none select-none"/>
-                    </div>
-                    <div class="pt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="750"
+                    <div class="pt-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="750"
                          data-aos-once="true">
                         <h1 class="font-one-lord text-center text-white uppercase text-nowrap">{{
                                 $t('welcome.title')
@@ -114,28 +104,85 @@ const openModal = () => {
     </ui-modal-primary>
 </template>
 
-<style scoped lang="less">
+<style scoped>
+.primary-header {
+    &-inner {
+        &-background-image {
+            @apply absolute w-full h-dvh bg-fixed bg-cover;
+        }
+
+        &-gradient {
+            @apply absolute w-dvw z-10 h-60;
+
+            &-top {
+                @apply top-0;
+            }
+
+            &-bottom {
+                @apply bottom-0;
+            }
+        }
+    }
+}
+
+.dark-mode .primary-header {
+    &-inner {
+        &-background-image {
+            background-image: url('/img/backgrounds/bg-9.jpg');
+        }
+
+        &-gradient {
+            &-top {
+                @apply bg-vlada-gradient-4;
+            }
+
+            &-bottom {
+                @apply bg-vlada-gradient-3;
+            }
+        }
+    }
+}
+
+.light-mode .primary-header {
+    &-inner {
+        &-background-image {
+            background-image: url('/img/backgrounds/bg-10.jpg');
+        }
+
+        &-gradient {
+            &-top {
+                @apply bg-vlada-gradient-2;
+            }
+
+            &-bottom {
+                @apply bg-vlada-gradient-1;
+            }
+        }
+    }
+}
+
+
 .modal {
-@apply w-auto;
+    @apply w-auto;
 
     h3 {
-    @apply font-one-lord;
+        @apply font-one-lord;
     }
 
     span {
-    @apply font-arpona-regular;
+        @apply font-arpona-regular;
     }
 }
 
 .download-modal-container {
-@apply flex flex-col mt-5;
+    @apply flex flex-col mt-5;
 
     &-download-type-or {
-    @apply font-arpona-regular text-center my-2;
+        @apply font-arpona-regular text-center my-2;
     }
 
     &-download-type-card {
-    @apply flex justify-between relative z-10;
+        @apply flex justify-between relative z-10;
         border-radius: 0.3rem;
         background: linear-gradient(120deg, rgb(42, 34, 22), rgb(111, 81, 35));
 
@@ -156,7 +203,7 @@ const openModal = () => {
         }
 
         &-type {
-        @apply px-5 py-4 text-white font-arpona-regular;
+            @apply px-5 py-4 text-white font-arpona-regular;
         }
     }
 }

@@ -10,7 +10,11 @@ export default {
                 'small2': '',
             },
             backgroundImage: {
-                'vlada-gradient-1': 'linear-gradient(0deg, rgba(249, 250, 251, 1) 2%, rgba(249, 250, 251, 0.5) 20%, rgba(249,0,0,0) 80%);',
+                'vlada-gradient-1': 'linear-gradient(0deg, rgba(249, 250, 251, 1) 5%, rgba(249, 250, 251, 0.5) 40%, rgba(249,0,0,0) 80%);',
+                'vlada-gradient-2': 'linear-gradient(180deg, rgba(249, 250, 251, 1) 5%, rgba(249, 250, 251, 0.5) 40%, rgba(249,0,0,0) 80%);',
+                'vlada-gradient-3': 'linear-gradient(0deg, rgba(24,24,27, 1) 5%, rgba(24,24,27, 0.5) 40%, rgba(249,0,0,0) 80%);',
+                'vlada-gradient-4': 'linear-gradient(180deg, rgba(24,24,27, 1) 5%, rgba(24,24,27, 0.5) 40%, rgba(249,0,0,0) 80%);',
+
             },
             colors: {
                 'vlada-color-1': '#dcbb8f',
