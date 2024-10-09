@@ -128,7 +128,7 @@ onMounted(() => {
                 &-image {
                     @apply brightness-50;
                 }
-                
+
                 &-gradient {
                     &-top {
                         @apply bg-vlada-gradient-4;
