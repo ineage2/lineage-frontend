@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import UiModalPrimary from '@/components/ui/modal/primary.vue';
+import UiModalPrimary from '@/components/ui/modal.vue';
 
 const { setLocale } = useI18n();
 const languageRef = ref(null);

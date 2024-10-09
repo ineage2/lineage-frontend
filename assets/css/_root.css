@@ -11,11 +11,11 @@
 }
 
 body {
-    @apply overflow-x-hidden transition-colors duration-500 font-arpona-regular;
+    @apply overflow-x-hidden font-arpona-regular;
 }
 
 .light-mode body {
-    @apply bg-slate-50
+    @apply bg-slate-50;
 }
 
 .dark-mode body {
