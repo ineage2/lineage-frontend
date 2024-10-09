@@ -64,10 +64,10 @@ onMounted(() => {
                             </div>
                         </div>
                     </div>
-                    <section class="max-w-7xl mx-auto md:top-[-200px] relative bg-slate-100 py-7 px-5 rounded-xl">
-                        <h1 class="my-5 text-center">{{ news.title }}</h1>
-                        <h4 class="text-center text-black mb-10">{{ news.description }}</h4>
-                        <div v-html="news.content"></div>
+
+                    <section class="news-inner-content">
+                        <h4 class="">{{ news.description }}</h4>
+                        <div class="" v-html="news.content"></div>
                     </section>
                 </section>
             </div>
