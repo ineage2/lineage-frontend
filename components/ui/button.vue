@@ -197,6 +197,16 @@ const getComponentProps = computed(() => {
         }
     }
 
+    .button-2 {
+        
+        &-text {
+
+            &-paragraph {
+                @apply text-white;
+            }
+        }
+    }
+
     .button-3 {
         @apply bg-vlada-color-1 hover:brightness-125;
 
@@ -221,6 +231,16 @@ const getComponentProps = computed(() => {
 
         &-decor-2 {
             @apply bg-vlada-color-5 bg-opacity-50;
+        }
+    }
+
+    .button-2 {
+
+        &-text {
+
+            &-paragraph {
+                @apply text-white;
+            }
         }
     }
 
