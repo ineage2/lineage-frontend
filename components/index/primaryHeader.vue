@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {useI18n} from 'vue-i18n';
-import UiModalPrimary from '@/components/ui/modal/primary.vue';
+import UiModalPrimary from '@/components/ui/modal.vue';
 
 const modalRef = ref(null);
 const {t} = useI18n();
@@ -131,7 +131,7 @@ const downloadOptions = [
 
 .dark-mode .primary-header-inner {
     &-background-image {
-        background-image: url('/img/backgrounds/bg-9.jpg');
+        background-image: url('/img/backgrounds/bg-7.webp');
     }
 
     &-gradient-top {
@@ -159,7 +159,7 @@ const downloadOptions = [
 
 .light-mode .primary-header-inner {
     &-background-image {
-        background-image: url('/img/backgrounds/bg-10.jpg');
+        background-image: url('/img/backgrounds/bg-12.webp');
     }
 
     &-gradient-top {
