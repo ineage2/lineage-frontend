@@ -73,11 +73,15 @@ onBeforeUnmount(() => {
     @apply shadow-md;
 }
 
-.dark-mode .header-scrolled {
-    @apply bg-zinc-800;
+.dark-mode {
+    .header-scrolled {
+        @apply bg-zinc-800;
+    }
 }
 
-.light-mode .header-scrolled {
-    @apply bg-slate-100;
+.light-mode {
+    .header-scrolled {
+        @apply bg-slate-100;
+    }
 }
 </style>
