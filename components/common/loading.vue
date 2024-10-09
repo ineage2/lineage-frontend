@@ -2,28 +2,30 @@
 </script>
 
 <template>
-    <section class="w-dvh h-dvh z-50 bg-slate-50 flex items-center justify-center">
-        <span class="loader border-vlada-color-1 border-solid border-4"></span>
+    <section class="loading vlada-transition">
+        <span class="loader"></span>
     </section>
 </template>
 
 <style scoped>
-.loader {
-    width: 48px;
-    height: 48px;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+.loading {
+    @apply fixed z-50 w-full h-full flex items-center justify-center;
+    
+    .loader {
+        @apply w-11 h-11 border-b-transparent rounded-full inline-block animate-spin border-vlada-color-1 border-5;
+    }
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
+
+.dark-mode {
+    .loading {
+        @apply bg-zinc-900;
     }
-    100% {
-        transform: rotate(360deg);
+}
+
+.light-mode {
+    .loading {
+        @apply bg-slate-50;
     }
 }
 </style>

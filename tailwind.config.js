@@ -26,6 +26,9 @@ export default {
                 'vlada-color-6': 'rgba(43,33,25,0.8)',
                 'vlada-color-7': 'rgb(255, 240, 211)',
             },
+            borderWidth: {
+                '5': '5px',
+            },
             fontFamily: {
                 'arpona-regular': ['arpona-regular', 'sans-serif'],
                 'one-lord': ['one-lord', 'sans-serif'],

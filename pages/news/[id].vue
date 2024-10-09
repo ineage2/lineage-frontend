@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import {onMounted, ref} from 'vue';
+import {useRoute} from 'vue-router';
 import NewsService from '~/utils/api/services/newsService';
 
 interface NewsItem {
@@ -13,12 +13,11 @@ interface NewsItem {
 }
 
 const newsList = ref<NewsItem[]>([]);
-const loading = ref(false);
+const loading = ref(true);
 
 const route = useRoute();
 
 const fetchCurrentNews = async (newsId: number) => {
-    loading.value = true;
     try {
         const response = await NewsService.show(newsId, {
             'Content-Type': 'application/json',
@@ -42,11 +41,14 @@ onMounted(() => {
 
 <template>
     <div>
-        <common-loading v-if="loading" />
+        <common-loading v-if="loading"/>
         <transition name="fade">
             <div v-if="!loading">
                 <section v-for="news in newsList" :key="news.id" class="h-auto">
-                    <div class="w-dvw aspect-16-7 bg-fixed bg-no-repeat bg-cover bg-center" :style="{ backgroundImage: `url(${news.image_large_url})` }">
+                    <div class="w-dvw aspect-16-6 bg-fixed bg-no-repeat bg-cover bg-center"
+                         :style="{ backgroundImage: `url(${news.image_large_url})` }">
+                        
+                        
                     </div>
                     <section class="max-w-7xl mx-auto md:top-[-200px] relative bg-slate-100 py-7 px-5 rounded-xl">
                         <h1 class="my-5 text-center">{{ news.title }}</h1>
