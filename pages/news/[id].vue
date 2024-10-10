@@ -66,8 +66,10 @@ onMounted(() => {
                     </div>
 
                     <section class="news-inner-content">
-                        <h4 class="">{{ news.description }}</h4>
-                        <div class="" v-html="news.content"></div>
+                        <div class="news-inner-content-inner" data-aos="fade-in" data-aos-delay="400"
+                             data-aos-duration="750" data-aos-once="true">
+                            <div class="news-inner-content-inner-main" v-html="news.content"></div>
+                        </div>
                     </section>
                 </section>
             </div>
@@ -115,7 +117,11 @@ onMounted(() => {
         }
 
         &-content {
-            @apply z-10;
+            @apply z-20 relative max-w-7xl px-2 mx-auto;
+
+            &-inner {
+                @apply px-4 py-5 rounded-xl -top-40 relative;
+            }
         }
     }
 }
@@ -153,9 +159,60 @@ onMounted(() => {
                     }
                 }
             }
+
+            &-content {
+                &-inner {
+                    @apply bg-zinc-800 shadow-2xl;
+                }
+            }
         }
     }
 }
+
+
+.light-mode {
+    .news {
+        &-inner {
+            &-background {
+
+                &-image {
+                    @apply brightness-125;
+                }
+
+                &-gradient {
+                    &-top {
+                        @apply bg-vlada-gradient-2;
+                    }
+
+                    &-bottom {
+                        @apply bg-vlada-gradient-1;
+                    }
+                }
+
+                &-content {
+                    &-title {
+                        h1 {
+                            @apply text-black;
+                        }
+                    }
+
+                    &-description {
+                        h4 {
+                            @apply text-black;
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                &-inner {
+                    @apply bg-slate-100 shadow-xl;
+                }
+            }
+        }
+    }
+}
+
 
 
 .fade-enter-active,

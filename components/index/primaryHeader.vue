@@ -109,7 +109,7 @@ const downloadOptions = [
                     @apply mb-2 max-w-6xl;
 
                     h4 {
-                        @apply text-center opacity-90;
+                        @apply text-center;
                     }
                 }
 
