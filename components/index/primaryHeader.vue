@@ -131,6 +131,7 @@ const downloadOptions = [
 
 .dark-mode .primary-header-inner {
     &-background-image {
+        @apply brightness-50;
         background-image: url('/img/backgrounds/bg-7.webp');
     }
 
@@ -159,6 +160,7 @@ const downloadOptions = [
 
 .light-mode .primary-header-inner {
     &-background-image {
+        @apply brightness-125;
         background-image: url('/img/backgrounds/bg-12.webp');
     }
 
