@@ -32,7 +32,7 @@ const props = defineProps<Props>();
 }
 
 .button:hover::after {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .button::after {
@@ -46,7 +46,7 @@ const props = defineProps<Props>();
     right: -0.1rem;
     bottom: -0.1rem;
     top: -0.1rem;
-    opacity: 0.3;
+    opacity: 0.8;
     transform: rotate(45deg);
     filter: brightness(130%);
     pointer-events: none;

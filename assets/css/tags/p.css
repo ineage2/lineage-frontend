@@ -1,0 +1,15 @@
+p,a,li,span,button {
+    @apply transition-all duration-500;
+}
+
+.dark-mode {
+    p, button {
+        @apply text-white;
+    }
+}
+
+.light-mode {
+    p, button {
+        @apply text-black;
+    }
+}

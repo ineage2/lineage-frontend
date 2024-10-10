@@ -1,15 +1,25 @@
 <script setup lang="ts">
 import throttle from 'lodash/throttle';
+import {ref, onMounted, onBeforeUnmount} from 'vue';
 
 const headerClass = ref('header-default');
+const isMobileMenuOpen = ref(false);
+
+const navLinks = [
+    {to: "/", text: 'header.home'},
+    {to: "/news", text: 'header.news'},
+    {to: "/shop", text: 'header.shop'},
+    {to: "/knowledge-base", text: 'header.knowledge-base'},
+    {to: "/account", text: 'header.account'}
+];
 
 const handleScroll = throttle(() => {
-    if (window.scrollY > 30) {
-        headerClass.value = 'header-scrolled';
-    } else {
-        headerClass.value = 'header-default';
-    }
+    headerClass.value = window.scrollY > 150 ? 'header-scrolled' : 'header-default';
 }, 200);
+
+const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
@@ -22,44 +32,56 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <header class="header" :class="headerClass">
-        <div class="container-inner">
-            <div class="header-container">
-                <ul class="header-container-list" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
-                    data-aos-once="true">
-                    <li>
-                        <ui-link-primary size="base" to="/" :placeholder="$t('header.home')"/>
-                    </li>
-                    <li>
-                        <ui-link-primary size="base" to="/news" :placeholder="$t('header.news')"/>
-                    </li>
-                    <li>
-                        <ui-link-primary size="base" to="/shop" :placeholder="$t('header.shop')"/>
-                    </li>
-                </ul>
-            </div>
+    <header class="header vlada-transition" id="header" :class="headerClass">
+        <div class="vlada-container header-inner">
+            <ul class="header-inner-list" data-aos="fade-down" data-aos-delay="100" data-aos-duration="600"
+                data-aos-once="true">
+                <li v-for="link in navLinks" :key="link.text">
+                    <lazy-ui-link :to="link.to">{{ $t(link.text) }}</lazy-ui-link>
+                </li>
+            </ul>
         </div>
     </header>
 </template>
 
-<style scoped lang="less">
+<style scoped>
 .header {
-@apply py-3 fixed w-full z-50 top-0 transition duration-500;
+    @apply fixed w-full z-40 top-0 py-3;
 
-    &-container {
-    @apply flex items-center justify-center;
-        
+    &-inner {
+        @apply flex justify-center items-center;
+
         &-list {
-            @apply flex gap-4 items-center;
+            @apply gap-4 hidden md:flex;
+        }
+
+        &-mobile {
+            @apply flex md:hidden w-full bg-zinc-800 absolute top-0;
+
+            &-list {
+                @apply flex flex-col justify-center items-center w-full my-10;
+
+                li {
+                    @apply mb-5
+                }
+            }
         }
     }
 }
 
-.header-default {
-@apply bg-transparent;
+.header-scrolled {
+    @apply shadow-md;
 }
 
-.header-scrolled {
-@apply bg-vlada-color-1 shadow-lg;
+.dark-mode {
+    .header-scrolled {
+        @apply bg-zinc-800;
+    }
+}
+
+.light-mode {
+    .header-scrolled {
+        @apply bg-slate-100;
+    }
 }
 </style>

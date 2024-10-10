@@ -1,3 +1,5 @@
+@import url('tags/import.css');
+
 @font-face {
     font-family: arpona-regular;
     src: url(assets/fonts/Arpona-Regular.woff);
@@ -9,20 +11,24 @@
 }
 
 body {
-    @apply bg-vlada-color-1 overflow-x-hidden
+    @apply overflow-x-hidden font-arpona-regular;
+}
+
+.light-mode body {
+    @apply bg-slate-50;
+}
+
+.dark-mode body {
+    @apply bg-zinc-900;
 }
 
 #__nuxt {
-    @apply overflow-hidden bg-vlada-color-1;
-}
-
-.container-inner {
-    @apply mx-auto px-1 md:px-2 container max-w-big; 
+    @apply overflow-hidden;
 }
 
 /* h1 h6 */
 h1, h2, h3, h4, h5, h6 {
-    @apply transition-colors text-vlada-color-2;
+    @apply transition-colors text-vlada-color-2 font-one-lord;
 }
 
 h1 {

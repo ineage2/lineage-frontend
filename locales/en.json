@@ -22,7 +22,7 @@
         "start": "Just a few steps away to start your adventure",
         "download": "Download",
         "create-account": "Create account",
-        "join-in-community": "Join in community",
+        "join-in-community": "In community",
         "modal": {
             "download-modal": {
                 "title": "Download Launcher",
@@ -58,7 +58,6 @@
     },
     "footer": {
         "contact-us": "Contact us",
-        "our-services": "Our Services",
         "privacy-policy": "Privacy Policy",
         "terms-and-conditions": "Terms & Conditions",
         "copyright": "© Copyright 2024 all rights reserved"

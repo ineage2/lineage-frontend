@@ -3,18 +3,18 @@
 </script>
 
 <template>
-    <common-header/>
-    <common-share/>
     <index-primary-header/>
-    <index-servers/>
-    <ui-br height="10"/>
-    <index-statistics/>
-    <ui-br height="10"/>
-    <index-latest-news/>
-    <ui-br height="10"/>
-    <index-var-timeout/>
-    <ui-br height="10"/>
-    <common-footer/>
+    <common-share/>
+    <ui-br height="20"/>
+    <lazy-index-latest-news/>
+    <!--    &lt;!&ndash;    <index-servers/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <ui-br height="10"/>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;    <ui-br height="10"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <index-statistics/>&ndash;&gt;-->
+    <!--    <ui-br height="10"/>-->
+    <!--    <index-var-timeout/>-->
+    <!--    <ui-br height="10"/>-->
 </template>
 
 <style scoped>
